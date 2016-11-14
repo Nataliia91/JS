@@ -33,5 +33,33 @@ for (var i = 8; i >= 1; i--) {
 	leftArr.push(arr[i][0]);
 }
 
-var endArr = topArr.concat(rightArr , bottomArr, leftArr);
+var endArr = topArr.concat(rightArr, bottomArr, leftArr);
 console.log(endArr);
+
+var topRevArr = [];
+var rightRevArr = [];
+var bottomRevArr = [];
+var leftRevArr = [];
+
+for (var i = 9; i >= 0; i--) {
+	topRevArr.push(arr[0][i]);
+}
+console.log(topRevArr);
+
+for (var i = 1; i < ARR_SIZE; i++) {
+	leftRevArr.push(arr[i][0]);
+}
+console.log(leftRevArr);
+
+for (var i = 1; i < ARR_SIZE; i ++) {
+	bottomRevArr.push(arr[9][i]);
+}
+console.log(bottomRevArr);
+
+for (var i = 8; i > 0; i--) {
+	rightRevArr.push(arr[i][9]);
+}
+console.log(rightRevArr);
+
+var endRevArr = topRevArr.concat(leftRevArr, bottomRevArr, rightRevArr);
+console.log(endRevArr);
